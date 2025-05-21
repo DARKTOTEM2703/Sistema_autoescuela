@@ -114,3 +114,37 @@
     [id] => 2
 )
 
+[2025-05-21 17:47:47] Procesando formulario POST: Array
+(
+    [nombre] => samantha
+    [direccion] => asdd
+    [celular] => 9996369799
+    [tipo_auto] => estandar
+    [horario] => VACACIONES
+)
+
+[2025-05-21 17:47:47] Archivos recibidos: Array
+(
+    [recibo] => Array
+        (
+            [name] => Evidencia sisi 2022.pdf
+            [full_path] => Evidencia sisi 2022.pdf
+            [type] => application/pdf
+            [tmp_name] => C:\xampp\tmp\php90D1.tmp
+            [error] => 0
+            [size] => 183552
+        )
+
+)
+
+[2025-05-21 17:47:47] Repository creado
+[2025-05-21 17:47:47] Validador creado
+[2025-05-21 17:47:47] ArchivoHandler creado
+[2025-05-21 17:47:47] EstudianteService creado
+[2025-05-21 17:47:47] Resultado: Array
+(
+    [success] => 1
+    [mensaje] => Estudiante registrado correctamente
+    [id] => 3
+)
+

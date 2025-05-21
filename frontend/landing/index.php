@@ -211,7 +211,7 @@
         </div>
     </footer>
 
-    <script src="js/cursosAJAX.js"></script>
+    <script src="../inscripcion/js/cursos.js"></script>
 </body>
 
 </html>

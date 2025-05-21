@@ -173,7 +173,7 @@ if (!$authService->isAuthenticated()) {
     </div>
 
     <script src="js/admin.js"></script>
-    <script src="js/cursos.js"></script>
+    <script src="js/cursosAJAX.js"></script>
 </body>
 
 </html>
