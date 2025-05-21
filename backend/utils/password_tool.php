@@ -347,3 +347,10 @@ if (basename($_SERVER['SCRIPT_FILENAME']) == basename(__FILE__)) {
     header('Location: ../../frontend/admin/tools/password_manager.php');
     exit;
 }
+
+// Ejemplo de estructura de respuesta esperada para generación de hash
+return [
+    'success' => true,
+    'hash' => '$2y$10$YrpF8lcWblsE8mOtKVzAkOD...', // El hash generado
+    'result' => 'Hash generado para la contraseña'
+];

@@ -62,7 +62,7 @@
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>Horarios Flexibles</h3>
-                    <p>Ofrecemos horarios adaptados a tus necesidades, incluyendo fines de semana.</p>
+                    <p id="horariosInfo">Cargando horarios disponibles...</p>
                 </div>
 
                 <div class="feature-card">
@@ -77,48 +77,40 @@
 
         <section class="courses">
             <h2 class="section-title">Nuestros Cursos</h2>
-            <div class="courses-table-container">
-                <table class="courses-table">
-                    <thead>
-                        <tr>
-                            <th>Curso</th>
-                            <th>Duración</th>
-                            <th>Clases Prácticas</th>
-                            <th>Clases Teóricas</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Curso Básico</td>
-                            <td>4 semanas</td>
-                            <td>10 horas</td>
-                            <td>5 horas</td>
-                            <td>$2,500</td>
-                        </tr>
-                        <tr>
-                            <td>Curso Intermedio</td>
-                            <td>6 semanas</td>
-                            <td>15 horas</td>
-                            <td>8 horas</td>
-                            <td>$3,800</td>
-                        </tr>
-                        <tr>
-                            <td>Curso Avanzado</td>
-                            <td>8 semanas</td>
-                            <td>20 horas</td>
-                            <td>10 horas</td>
-                            <td>$4,500</td>
-                        </tr>
-                        <tr>
-                            <td>Curso Intensivo</td>
-                            <td>2 semanas</td>
-                            <td>12 horas</td>
-                            <td>6 horas</td>
-                            <td>$3,200</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="courses-container">
+                <div class="course-filters">
+                    <div class="filter-group">
+                        <label for="filtroHorario">Filtrar por horario:</label>
+                        <select id="filtroHorario">
+                            <option value="">Todos los horarios</option>
+                            <!-- Opciones cargadas dinámicamente -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="courses-table-container">
+                    <table class="courses-table">
+                        <thead>
+                            <tr>
+                                <th>Curso</th>
+                                <th>Duración</th>
+                                <th>Clases Prácticas</th>
+                                <th>Clases Teóricas</th>
+                                <th>Horarios Disponibles</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cursosTableBody">
+                            <!-- Los datos se cargarán dinámicamente con JavaScript -->
+                            <tr>
+                                <td colspan="6" class="loading-message">
+                                    <div class="spinner"></div>
+                                    <p>Cargando cursos...</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -218,6 +210,8 @@
             <p>© 2025 AutoEscuela Segura. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="js/cursosAJAX.js"></script>
 </body>
 
 </html>

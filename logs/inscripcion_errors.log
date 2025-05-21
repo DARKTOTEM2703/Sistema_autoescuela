@@ -80,3 +80,37 @@
     [id] => 1
 )
 
+[2025-05-21 12:25:31] Procesando formulario POST: Array
+(
+    [nombre] => Jafeth Daniel
+    [direccion] => Calle 55A #357 x 18 y 20
+    [celular] => 9996369799
+    [tipo_auto] => estandar
+    [horario] => VACACIONES
+)
+
+[2025-05-21 12:25:31] Archivos recibidos: Array
+(
+    [recibo] => Array
+        (
+            [name] => CARTA SOLICITUD.pdf
+            [full_path] => CARTA SOLICITUD.pdf
+            [type] => application/pdf
+            [tmp_name] => C:\xampp\tmp\php85BF.tmp
+            [error] => 0
+            [size] => 193945
+        )
+
+)
+
+[2025-05-21 12:25:31] Repository creado
+[2025-05-21 12:25:31] Validador creado
+[2025-05-21 12:25:31] ArchivoHandler creado
+[2025-05-21 12:25:31] EstudianteService creado
+[2025-05-21 12:25:31] Resultado: Array
+(
+    [success] => 1
+    [mensaje] => Estudiante registrado correctamente
+    [id] => 2
+)
+

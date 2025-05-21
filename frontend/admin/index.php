@@ -46,6 +46,9 @@ if (!$authService->isAuthenticated()) {
                         <a href="index.php"><i class="fas fa-user-graduate"></i> Estudiantes</a>
                     </li>
                     <li>
+                        <a href="cursos.php"><i class="fas fa-graduation-cap"></i> Cursos</a>
+                    </li>
+                    <li>
                         <a href="horarios.php"><i class="fas fa-clock"></i> Horarios</a>
                     </li>
                     <li>

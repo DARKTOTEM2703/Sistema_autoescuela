@@ -25,10 +25,23 @@
                         <a href="index.php"><i class="fas fa-user-graduate"></i> Estudiantes</a>
                     </li>
                     <li>
+                        <a href="cursos.php"><i class="fas fa-graduation-cap"></i> Cursos</a>
+                    </li>
+                    <li>
                         <a href="horarios.php"><i class="fas fa-clock"></i> Horarios</a>
                     </li>
                     <li class="active">
                         <a href="configuracion.php"><i class="fas fa-cog"></i> Configuración</a>
+                    </li>
+                    <!-- Sección de herramientas -->
+                    <li class="nav-section">
+                        <span>Herramientas</span>
+                    </li>
+                    <li>
+                        <a href="tools/password_manager.php"><i class="fas fa-key"></i> Gestión Contraseñas</a>
+                    </li>
+                    <li>
+                        <a href="tools/database_init.php"><i class="fas fa-database"></i> Inicializar BD</a>
                     </li>
                 </ul>
             </nav>
