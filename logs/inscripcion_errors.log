@@ -1,0 +1,48 @@
+[2025-05-21 10:41:42] Procesando formulario POST: Array
+(
+    [nombre] => Jafeth Daniel
+    [direccion] => Calle 55A #357 x 18 y 20
+    [celular] => 9996369799
+    [tipo_auto] => estandar
+    [horario] => tarde
+)
+
+[2025-05-21 10:41:42] Archivos recibidos: Array
+(
+    [recibo] => Array
+        (
+            [name] => CV_Jafeth_Gamboa.pdf
+            [full_path] => CV_Jafeth_Gamboa.pdf
+            [type] => application/pdf
+            [tmp_name] => C:\xampp\tmp\php7734.tmp
+            [error] => 0
+            [size] => 162825
+        )
+
+)
+
+[2025-05-21 10:41:42] Repository creado
+[2025-05-21 10:41:57] Procesando formulario POST: Array
+(
+    [nombre] => Jafeth Daniel
+    [direccion] => asdasdas
+    [celular] => 9996369799
+    [tipo_auto] => estandar
+    [horario] => manana
+)
+
+[2025-05-21 10:41:57] Archivos recibidos: Array
+(
+    [recibo] => Array
+        (
+            [name] => CV_Jafeth_Gamboa.pdf
+            [full_path] => CV_Jafeth_Gamboa.pdf
+            [type] => application/pdf
+            [tmp_name] => C:\xampp\tmp\phpB47C.tmp
+            [error] => 0
+            [size] => 162825
+        )
+
+)
+
+[2025-05-21 10:41:57] Repository creado

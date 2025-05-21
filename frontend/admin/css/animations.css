@@ -1,0 +1,210 @@
+/* Animaciones para el panel de administración */
+
+/* Animación de carga */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(233, 30, 99, 0.2);
+    border-top: 5px solid #e91e63;
+    border-radius: 50%;
+    margin: 30px auto;
+    animation: spin 1s linear infinite;
+}
+
+.loading-message {
+    text-align: center;
+    padding: 30px !important;
+    color: #888;
+}
+
+.loading-message p {
+    margin-top: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Animaciones para filas */
+.fade-in-row {
+    animation: fadeIn 0.5s ease-out;
+    opacity: 1;
+}
+
+.fade-out-row {
+    animation: fadeOut 0.3s ease-out forwards;
+    opacity: 0;
+    pointer-events: none;
+}
+
+tr.deleting {
+    background-color: rgba(244, 67, 54, 0.1) !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
+}
+
+/* Sistema de notificaciones */
+#notificacion-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.notificacion {
+    background: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+}
+
+.notificacion.mostrar {
+    transform: translateX(0);
+}
+
+.notificacion.success {
+    border-left: 4px solid #4CAF50;
+    background-color: #1e1e1e;
+}
+
+.notificacion.error {
+    border-left: 4px solid #F44336;
+    background-color: #1e1e1e;
+}
+
+.notificacion.info {
+    border-left: 4px solid #2196F3;
+    background-color: #1e1e1e;
+}
+
+.notificacion-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.close-notif {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close-notif:hover {
+    color: white;
+}
+
+/* Animaciones para modales */
+.modal {
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    transition: all 0.3s ease;
+    transform: translateY(-30px) scale(0.95);
+}
+
+.modal.show .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+/* Animaciones para botones */
+.pulse-animation {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(233, 30, 99, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(233, 30, 99, 0);
+    }
+}
+
+.btn-icon:hover {
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    50% { transform: scale(1.2); }
+}
+
+/* Estilos para mensajes de error y retry */
+.error-message {
+    color: #F44336;
+    padding: 20px !important;
+    text-align: center;
+}
+
+.error-message i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.btn-retry {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-retry:hover {
+    background-color: #555;
+}
+
+.warning-text {
+    color: #FF9800;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Efecto de hover para las filas de tabla */
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
