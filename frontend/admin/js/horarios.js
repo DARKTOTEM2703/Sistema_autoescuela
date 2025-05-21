@@ -69,9 +69,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!response.ok) {
           throw new Error(`Error de red: ${response.status}`);
         }
+        
+        // Comprueba el tipo de contenido antes de parsear
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          return response.text().then(text => {
+            console.error("Respuesta no JSON:", text);
+            throw new Error("La respuesta no es un JSON válido");
+          });
+        }
+        
         return response.json();
       })
       .then((data) => {
+        console.log("Datos de horarios recibidos:", data);
         tableBody.innerHTML = "";
 
         if (!Array.isArray(data) || data.length === 0) {

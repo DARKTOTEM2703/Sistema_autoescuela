@@ -4,6 +4,9 @@ require_once __DIR__ . '/../autoload.php';
 use Backend\Config\Database;
 use Backend\Repositories\EstudianteRepository;
 
+// Activar la captura de errores para evitar que warnings contaminen el JSON
+ob_start();
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
@@ -26,14 +29,14 @@ try {
             if (isset($_GET['id'])) {
                 $horario = $repo->getHorarioById($_GET['id']);
                 if ($horario) {
-                    echo json_encode($horario);
+                    echo json_encode($horario, JSON_PRETTY_PRINT);
                 } else {
                     http_response_code(404);
-                    echo json_encode(['error' => true, 'mensaje' => 'Horario no encontrado']);
+                    echo json_encode(['error' => true, 'mensaje' => 'Horario no encontrado'], JSON_PRETTY_PRINT);
                 }
             } else {
                 $horarios = $repo->getAllHorarios();
-                echo json_encode($horarios);
+                echo json_encode($horarios, JSON_PRETTY_PRINT);
             }
             break;
 

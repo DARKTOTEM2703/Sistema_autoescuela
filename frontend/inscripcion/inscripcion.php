@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <?php
+    // Agregar al principio del archivo para cargar horarios de la base de datos
+    require_once '../../backend/autoload.php';
+    use Backend\Repositories\EstudianteRepository;
+
+    // Obtener los horarios
+    $repository = new EstudianteRepository();
+    $horarios = $repository->getAllHorarios();
+    ?>
+
     <header>
         <div class="logo">
             <span class="icon"><i class="fas fa-car"></i></span>
@@ -35,7 +45,7 @@
                 <form id="inscripcionForm" action="../../backend/inscripcion/procesar_inscripcion.php" method="post"
                     enctype="multipart/form-data">
                     <!-- Contenedor para mostrar errores -->
-                    <div id="erroresContainer" class="errores-container" style="display: none;"></div>
+                    <div id="erroresContainer" style="display:none;" class="error-container"></div>
 
                     <div class="form-group">
                         <label for="nombre">Nombre Completo</label>
@@ -70,10 +80,16 @@
                         <div class="select-wrapper">
                             <select id="horario" name="horario" required>
                                 <option value="" disabled selected>Seleccione un horario</option>
-                                <option value="manana">Mañana (8:00 AM - 12:00 PM)</option>
-                                <option value="tarde">Tarde (12:00 PM - 4:00 PM)</option>
-                                <option value="noche">Noche (4:00 PM - 8:00 PM)</option>
-                                <option value="sabado">Sábado (9:00 AM - 2:00 PM)</option>
+                                <?php foreach($horarios as $horario): ?>
+                                    <?php 
+                                        // Formatear las horas para mostrar HH:MM
+                                        $horaInicio = substr($horario['hora_inicio'], 0, 5);
+                                        $horaFin = substr($horario['hora_fin'], 0, 5);
+                                    ?>
+                                    <option value="<?php echo $horario['nombre']; ?>">
+                                        <?php echo ucfirst($horario['nombre']) . " ({$horaInicio} - {$horaFin})"; ?>
+                                    </option>
+                                <?php endforeach; ?>
                             </select>
                             <i class="fas fa-chevron-down"></i>
                         </div>

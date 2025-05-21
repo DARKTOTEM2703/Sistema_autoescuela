@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2025 a las 06:47:39
+-- Tiempo de generación: 21-05-2025 a las 11:21:48
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -61,7 +61,8 @@ INSERT INTO `horarios` (`id`, `nombre`, `hora_inicio`, `hora_fin`, `dias`, `capa
 (1, 'manana', '08:00:00', '12:00:00', 'Lunes a Viernes', 10),
 (2, 'tarde', '13:00:00', '17:00:00', 'Lunes a Viernes', 8),
 (3, 'noche', '18:00:00', '20:00:00', 'Lunes a Viernes', 6),
-(4, 'sabado', '09:00:00', '14:00:00', 'Sábados', 12);
+(4, 'sabado', '09:00:00', '14:00:00', 'Sábados', 12),
+(5, 'VACACIONES', '12:34:00', '04:06:00', 'MARTES, MIERCOLES', 12);
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `password`, `nombre`, `rol`, `fecha_creacion`) VALUES
-(1, 'admin', '$2y$10$HGw4QYa.8XmvE9VpGl/VY.7MIl5ux8QWrHvIc/wDfDjDjfcmZkVhG', 'Administrador', 'administrador', '2025-05-20 23:14:25');
+(1, 'admin', '$2y$10$N4X4lVfNM/Bc1MvwRxgo8e.qvaly8QdsSbB4jHFPJwlw6X1q3Hutm', 'Administrador', 'administrador', '2025-05-20 23:14:25');
 
 --
 -- Índices para tablas volcadas
@@ -151,7 +152,7 @@ ALTER TABLE `estudiantes`
 -- AUTO_INCREMENT de la tabla `horarios`
 --
 ALTER TABLE `horarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tipos_auto`

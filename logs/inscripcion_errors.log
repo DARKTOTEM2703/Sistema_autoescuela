@@ -46,3 +46,37 @@
 )
 
 [2025-05-21 10:41:57] Repository creado
+[2025-05-21 11:22:23] Procesando formulario POST: Array
+(
+    [nombre] => Jafeth Daniel
+    [direccion] => asdas
+    [celular] => 9996369799
+    [tipo_auto] => estandar
+    [horario] => VACACIONES
+)
+
+[2025-05-21 11:22:23] Archivos recibidos: Array
+(
+    [recibo] => Array
+        (
+            [name] => Evidencia sisi 2022.pdf
+            [full_path] => Evidencia sisi 2022.pdf
+            [type] => application/pdf
+            [tmp_name] => C:\xampp\tmp\phpB99A.tmp
+            [error] => 0
+            [size] => 183552
+        )
+
+)
+
+[2025-05-21 11:22:23] Repository creado
+[2025-05-21 11:22:23] Validador creado
+[2025-05-21 11:22:23] ArchivoHandler creado
+[2025-05-21 11:22:23] EstudianteService creado
+[2025-05-21 11:22:23] Resultado: Array
+(
+    [success] => 1
+    [mensaje] => Estudiante registrado correctamente
+    [id] => 1
+)
+
