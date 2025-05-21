@@ -69,6 +69,27 @@ if (!$authService->isAuthenticated()) {
                 </div>
             </header>
 
+            <?php if (isset($_GET['result']) && $_GET['result'] == 'success'): ?>
+            <div class="notification-enhanced success-enhanced animate-pulse">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>¡Operación Finalizada con Éxito!</h3>
+                    <p>La base de datos del sistema ha sido inicializada correctamente con todos los parámetros
+                        predeterminados.</p>
+                    <p class="timestamp"><i class="far fa-clock"></i> <?php echo date('d/m/Y H:i:s'); ?></p>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($_GET['error'])): ?>
+            <div class="notification error">
+                <i class="fas fa-exclamation-circle"></i>
+                Error: <?php echo htmlspecialchars($_GET['error']); ?>
+            </div>
+            <?php endif; ?>
+
             <div class="content-wrapper">
                 <div class="tool-container">
                     <div class="warning-card">
@@ -80,7 +101,7 @@ if (!$authService->isAuthenticated()) {
                             tablas con datos iniciales. Esta acción no se puede deshacer.</p>
 
                         <div class="action-buttons">
-                            <a href="../../../backend/database/init_db.php" class="btn-danger">
+                            <a href="../../../backend/database/init_db.php?confirm_init=1" class="btn-danger">
                                 <i class="fas fa-database"></i> Inicializar Base de Datos
                             </a>
                             <a href="../configuracion.php" class="btn-secondary">

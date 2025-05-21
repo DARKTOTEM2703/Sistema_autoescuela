@@ -217,3 +217,96 @@
     border-radius: 4px;
     margin-top: 1rem;
 }
+
+/* Estilos mejorados para notificación de éxito */
+.notification-enhanced {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    transition: all 0.35s ease;
+    background-color: #ffffff;
+    border-left: 6px solid #1a9e42;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-enhanced {
+    background: linear-gradient(145deg, #f9fffc, #e6f7ec);
+}
+
+.success-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+    background: linear-gradient(135deg, #23c552, #16a83c);
+    border-radius: 50%;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 6px 15px rgba(22, 168, 60, 0.3);
+}
+
+.success-icon i {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 12px 0;
+    color: #0c5728;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.notification-content p {
+    margin: 8px 0;
+    font-size: 1.2em;
+    color: #2f6348;
+    line-height: 1.4;
+}
+
+.timestamp {
+    display: inline-block;
+    font-size: 0.85em !important;
+    color: #64856f !important;
+    font-style: italic;
+    margin-top: 12px !important;
+    background-color: rgba(232, 255, 243, 0.7);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(22, 168, 60, 0.15);
+}
+
+/* Animación mejorada */
+.animate-pulse {
+    animation: subtle-pulse 2.5s infinite;
+}
+
+@keyframes subtle-pulse {
+    0% {
+        box-shadow: 0 6px 20px rgba(22, 168, 60, 0.2);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(22, 168, 60, 0.4);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(22, 168, 60, 0.2);
+    }
+}
+
+/* Efecto hover para interactividad */
+.notification-enhanced:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}

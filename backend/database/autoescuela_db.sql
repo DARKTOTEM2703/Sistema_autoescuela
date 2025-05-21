@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-05-2025 a las 16:43:12
+-- Tiempo de generación: 21-05-2025 a las 17:59:56
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -96,7 +96,8 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `nombre`, `direccion`, `celular`, `tipo_auto_id`, `horario_id`, `recibo_path`, `fecha_registro`) VALUES
-(2, 'Jafeth Daniel', 'Calle 55A #357 x 18 y 20', '9996369799', 1, 5, 'uploads/recibos/682daa1bba781_1747823131.pdf', '2025-05-21 10:25:31');
+(2, 'Jafeth Daniel', 'Calle 55A #357 x 18 y 20', '9996369799', 1, 5, 'uploads/recibos/682daa1bba781_1747823131.pdf', '2025-05-21 10:25:31'),
+(3, 'samantha', 'asdd', '9996369799', 1, 5, 'uploads/recibos/682df5a3a7d9c_1747842467.pdf', '2025-05-21 15:47:47');
 
 -- --------------------------------------------------------
 
@@ -165,7 +166,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `password`, `nombre`, `rol`, `fecha_creacion`) VALUES
-(1, 'admin', '$2y$10$N4X4lVfNM/Bc1MvwRxgo8e.qvaly8QdsSbB4jHFPJwlw6X1q3Hutm', 'Administrador', 'administrador', '2025-05-20 23:14:25');
+(1, 'admin', '$2y$10$6pNzOUYOy5Yvtn/cc1dqHedSVDpr0xtjiAduC2BEmhCfpMXijeCm.', 'Administrador', 'administrador', '2025-05-20 23:14:25');
 
 --
 -- Índices para tablas volcadas
@@ -232,7 +233,7 @@ ALTER TABLE `curso_horario`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `horarios`

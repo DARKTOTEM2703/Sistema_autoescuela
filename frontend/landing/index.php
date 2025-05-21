@@ -17,17 +17,17 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
                 <li><a href="../admin/index.php" class="login">Iniciar Sesión</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="hero-text">
                 <h2>Aprende a conducir con seguridad y confianza</h2>
                 <p>Instructores certificados, vehículos modernos y horarios flexibles para adaptarse a tu ritmo de vida.
@@ -46,7 +46,7 @@
             </div>
         </section>
 
-        <section class="why-us">
+        <section class="why-us" id="nosotros">
             <h2 class="section-title">¿Por qué elegirnos?</h2>
             <div class="features-container">
                 <div class="feature-card">
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section class="courses">
+        <section class="courses" id="cursos">
             <h2 class="section-title">Nuestros Cursos</h2>
             <div class="courses-container">
                 <div class="course-filters">
@@ -126,7 +126,7 @@
         </section>
 
         <!-- Sección Ubicación y Contacto -->
-        <div class="location-contact-wrapper">
+        <div class="location-contact-wrapper" id="contacto">
             <section class="location-section">
                 <h2 class="section-title">Nuestra Ubicación</h2>
                 <div class="location-contact-container">

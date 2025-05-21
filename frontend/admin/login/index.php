@@ -31,10 +31,10 @@ unset($_SESSION['error_login']);
         </div>
         <nav>
             <ul>
-                <li><a href="../../landing/index.php">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="../../landing/index.php#inicio">Inicio</a></li>
+                <li><a href="../../landing/index.php#nosotros">Nosotros</a></li>
+                <li><a href="../../landing/index.php#cursos">Cursos</a></li>
+                <li><a href="../../landing/index.php#contacto">Contacto</a></li>
                 <li><a href="index.php" class="login">Iniciar Sesión</a></li>
             </ul>
         </nav>
@@ -91,10 +91,10 @@ unset($_SESSION['error_login']);
             <div class="footer-column">
                 <h4>Enlaces</h4>
                 <ul>
-                    <li><a href="../../landing/index.php">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="../../landing/index.php#inicio">Inicio</a></li>
+                    <li><a href="../../landing/index.php#nosotros">Nosotros</a></li>
+                    <li><a href="../../landing/index.php#cursos">Cursos</a></li>
+                    <li><a href="../../landing/index.php#contacto">Contacto</a></li>
                 </ul>
             </div>
 
