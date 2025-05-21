@@ -20,6 +20,7 @@ unset($_SESSION['error_login']);
     <title>Iniciar Sesión - AutoEscuela Segura</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../../css/animations-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -41,16 +42,16 @@ unset($_SESSION['error_login']);
     </header>
 
     <main>
-        <div class="login-container">
+        <div class="login-container reveal reveal-zoom">
             <div class="login-icon">
                 <i class="fas fa-sign-in-alt"></i>
             </div>
             <h2 class="login-title">Iniciar Sesión</h2>
 
             <?php if ($errorLogin): ?>
-            <div class="error-message">
-                <?php echo $errorLogin; ?>
-            </div>
+                <div class="error-message">
+                    <?php echo $errorLogin; ?>
+                </div>
             <?php endif; ?>
 
             <form action="../../../backend/auth/login.php" method="POST">
@@ -68,7 +69,7 @@ unset($_SESSION['error_login']);
                 <button type="submit" class="login-btn">Iniciar Sesión</button>
             </form>
 
-            <div class="admin-info">
+            <div class="admin-info reveal reveal-bottom">
                 <p>Para acceder al panel de administración, usa:</p>
                 <div class="admin-credentials">
                     Usuario: admin / Contraseña: admin123
@@ -78,7 +79,7 @@ unset($_SESSION['error_login']);
     </main>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-container stagger-container">
             <div class="footer-column">
                 <div class="footer-logo">
                     <span class="icon"><i class="fas fa-car"></i></span>
@@ -121,6 +122,8 @@ unset($_SESSION['error_login']);
             <p>© 2025 AutoEscuela Segura. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="../../js/scroll-reveal.js"></script>
 </body>
 
 </html>

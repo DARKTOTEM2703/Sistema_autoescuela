@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoEscuela Segura</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations-modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -48,7 +49,7 @@
 
         <section class="why-us" id="nosotros">
             <h2 class="section-title">¿Por qué elegirnos?</h2>
-            <div class="features-container">
+            <div class="features-container stagger-container">
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-car"></i>
@@ -139,7 +140,7 @@
                     </div>
                     <div class="contact-info">
                         <h2 class="contact-title">Contáctanos</h2>
-                        <ul class="contact-list">
+                        <ul class="contact-list stagger-container">
                             <li>
                                 <i class="fas fa-map-marker-alt"></i>
                                 <span>Calle 60 x 45 y 47, Centro, 97000 Mérida, Yucatán</span>
@@ -167,7 +168,7 @@
     </main>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-container stagger-container">
             <div class="footer-column">
                 <div class="footer-logo">
                     <span class="icon"><i class="fas fa-car"></i></span>
@@ -212,6 +213,7 @@
     </footer>
 
     <script src="../inscripcion/js/cursos.js"></script>
+    <script src="../js/scroll-reveal.js"></script>
 </body>
 
 </html>
