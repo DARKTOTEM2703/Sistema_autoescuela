@@ -200,19 +200,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const fileInput = document.getElementById('recibo');
-    const fileUploadBtn = document.querySelector('.file-upload-btn');
-    const fileInfo = document.querySelector('.file-info');
+document.addEventListener("DOMContentLoaded", () => {
+  const fileInput = document.getElementById("recibo");
+  const fileUploadBtn = document.querySelector(".file-upload-btn");
+  const fileInfo = document.querySelector(".file-info");
 
-    // Mostrar el nombre del archivo seleccionado
-    fileInput.addEventListener('change', (e) => {
-        const fileName = e.target.files[0] ? e.target.files[0].name : 'Ningún archivo seleccionado';
-        fileInfo.textContent = fileName;
-    });
+  // Mostrar el nombre del archivo seleccionado
+  fileInput.addEventListener("change", (e) => {
+    const fileName = e.target.files[0]
+      ? e.target.files[0].name
+      : "Ningún archivo seleccionado";
+    fileInfo.textContent = fileName;
+  });
 
-    // Abrir el selector de archivos al hacer clic en el botón
-    fileUploadBtn.addEventListener('click', () => {
-        fileInput.click();
-    });
+  // Abrir el selector de archivos al hacer clic en el botón
+  fileUploadBtn.addEventListener("click", () => {
+    fileInput.click();
+  });
 });
