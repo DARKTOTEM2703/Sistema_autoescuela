@@ -161,4 +161,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+  document.getElementById("btnNuevoEstudiante").onclick = function () {
+    document.getElementById("modalEstudiante").style.display = "block";
+  };
+  document.getElementById("cerrarModal").onclick = function () {
+    document.getElementById("modalEstudiante").style.display = "none";
+  };
+  // Cierra la ventana si se hace clic fuera del contenido
+  window.onclick = function (event) {
+    var modal = document.getElementById("modalEstudiante");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalEstudiante");
+  const abrirModalBtn = document.getElementById("btnNuevoEstudiante");
+  const cerrarModalBtn = document.getElementById("cerrarModal");
+
+  // Abrir la modal
+  abrirModalBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Cerrar la modal
+  cerrarModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Cerrar la modal al hacer clic fuera del contenido
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fileInput = document.getElementById('recibo');
+    const fileUploadBtn = document.querySelector('.file-upload-btn');
+    const fileInfo = document.querySelector('.file-info');
+
+    // Mostrar el nombre del archivo seleccionado
+    fileInput.addEventListener('change', (e) => {
+        const fileName = e.target.files[0] ? e.target.files[0].name : 'Ningún archivo seleccionado';
+        fileInfo.textContent = fileName;
+    });
+
+    // Abrir el selector de archivos al hacer clic en el botón
+    fileUploadBtn.addEventListener('click', () => {
+        fileInput.click();
+    });
 });

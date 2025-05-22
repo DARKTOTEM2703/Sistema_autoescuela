@@ -63,7 +63,7 @@
                         <i class="fas fa-clock"></i>
                     </div>
                     <h3>Horarios Flexibles</h3>
-                    <p id="horariosInfo">Cargando horarios disponibles...</p>
+                    <p>Ofrecemos horarios adaptados a tu disponibilidad, incluyendo fines de semana.</p>
                 </div>
 
                 <div class="feature-card">
@@ -181,20 +181,20 @@
             <div class="footer-column">
                 <h4>Enlaces</h4>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4>Servicios</h4>
                 <ul>
-                    <li><a href="#">Cursos para principiantes</a></li>
-                    <li><a href="#">Cursos avanzados</a></li>
-                    <li><a href="#">Clases particulares</a></li>
-                    <li><a href="#">Evaluaciones</a></li>
+                    <li><a href="#cursos">Cursos para principiantes</a></li>
+                    <li><a href="#cursos">Cursos avanzados</a></li>
+                    <li><a href="#cursos">Clases particulares</a></li>
+                    <li><a href="#cursos">Evaluaciones</a></li>
                 </ul>
             </div>
 

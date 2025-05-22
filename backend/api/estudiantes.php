@@ -13,10 +13,10 @@ header('Content-Type: application/json');
 
 try {
     $repo = new EstudianteRepository();
-    
+
     // Obtener todos los estudiantes con sus relaciones
     $estudiantes = $repo->getAllWithRelations();
-    
+
     // Devolver como JSON
     echo json_encode($estudiantes);
 } catch (Exception $e) {

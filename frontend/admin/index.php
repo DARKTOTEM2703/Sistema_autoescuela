@@ -86,9 +86,7 @@ if (!$authService->isAuthenticated()) {
                             <input type="text" placeholder="Buscar por nombre o teléfono" id="searchInput">
                             <i class="fas fa-search"></i>
                         </div>
-                        <button class="btn-primary" id="btnNuevoEstudiante">
-                            <i class="fas fa-plus"></i> Nuevo Estudiante
-                        </button>
+                        <button id="btnNuevoEstudiante" class="btn btn-primary">Nuevo Estudiante</button>
                     </div>
                 </div>
 
@@ -134,6 +132,76 @@ if (!$authService->isAuthenticated()) {
                     <button type="button" class="btn-secondary" id="cancelarEliminarBtn">Cancelar</button>
                     <button type="button" class="btn-danger" id="confirmarEliminarBtn">Eliminar</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Modal para Nuevo Estudiante -->
+    <div id="modalEstudiante" class="modal-estudiante">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h3 id="modalTitle">Registrar Nuevo Estudiante</h3>
+                <button class="cerrar-modal" id="cerrarModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formNuevoEstudiante" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" placeholder="Ingrese el correo electrónico"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono" placeholder="Ingrese el número de teléfono"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <textarea id="direccion" name="direccion" placeholder="Ingrese la dirección completa"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_auto">Tipo de Auto:</label>
+                        <select id="tipo_auto" name="tipo_auto" required>
+                            <option value="estandar">Estándar</option>
+                            <option value="automatico">Automático</option>
+                            <option value="ambos">Ambos</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horario Preferido:</label>
+                        <select id="horario" name="horario" required>
+                            <option value="" disabled selected>Seleccione un horario</option>
+                            <option value="mañana">Mañana</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noche">Noche</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="recibo">Recibo de Pago:</label>
+                        <div class="file-upload">
+                            <button type="button" class="file-upload-btn">Seleccionar archivo</button>
+                            <input type="file" id="recibo" name="recibo" accept="image/*,application/pdf"
+                                style="display: none;" required>
+                            <div class="file-info">Ningún archivo seleccionado</div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancelarBtn">Cancelar</button>
+                        <button type="submit" class="btn-primary">Registrar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

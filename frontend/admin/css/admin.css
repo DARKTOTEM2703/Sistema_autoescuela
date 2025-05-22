@@ -24,7 +24,7 @@
 .admin-body {
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -450,6 +450,163 @@
   justify-content: flex-end;
   gap: 1rem;
   margin-top: 1.5rem;
+}
+
+/* Ventana modal para nuevo estudiante */
+.modal-estudiante {
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del contenido de la modal */
+.modal-contenido {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Botón de cerrar */
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Estilo del formulario */
+.modal-contenido form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-contenido form label {
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.modal-contenido form input,
+.modal-contenido form textarea,
+.modal-contenido form select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--surface-light);
+  color: var(--text);
+}
+
+.modal-contenido form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-contenido form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-contenido form button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Estilo para el modal de estudiantes */
+.modal-estudiante .modal-contenido {
+  background-color: var(--surface); /* Cambiar a color oscuro */
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-estudiante .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.modal-estudiante .modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.modal-estudiante .modal-body {
+  padding: 1.5rem;
+  color: var(--text);
+}
+
+.modal-estudiante .form-group label {
+  color: var(--text);
+}
+
+.modal-estudiante .form-group input,
+.modal-estudiante .form-group select,
+.modal-estudiante .form-group textarea {
+  background-color: var(--surface-light);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.modal-estudiante .form-actions button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-estudiante .form-actions button:hover {
+  background-color: var(--primary-dark);
 }
 
 /* Responsive */
