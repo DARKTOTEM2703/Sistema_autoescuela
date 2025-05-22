@@ -6,8 +6,10 @@ session_start();
 require_once '../../backend/autoload.php';
 
 use Backend\Services\AuthService;
+use Backend\Repositories\EstudianteRepository;
 
 $authService = new AuthService();
+$repo = new EstudianteRepository();
 
 // Verificar si el usuario está autenticado
 if (!$authService->isAuthenticated()) {
@@ -16,8 +18,11 @@ if (!$authService->isAuthenticated()) {
     exit;
 }
 
-// Si el usuario está autenticado, se muestra la página normalmente
+// Obtener los tipos de auto y horarios para el formulario
+$tiposAuto = $repo->getAllTiposAuto();
+$horarios = $repo->getAllHorarios();
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -150,15 +155,15 @@ if (!$authService->isAuthenticated()) {
                         <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre completo" required>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="correo">Correo:</label>
                         <input type="email" id="correo" name="correo" placeholder="Ingrese el correo electrónico"
                             required>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
-                        <label for="telefono">Teléfono:</label>
-                        <input type="text" id="telefono" name="telefono" placeholder="Ingrese el número de teléfono"
+                        <label for="celular">Teléfono:</label>
+                        <input type="text" id="celular" name="celular" placeholder="Ingrese el número de teléfono"
                             required>
                     </div>
 
@@ -171,9 +176,12 @@ if (!$authService->isAuthenticated()) {
                     <div class="form-group">
                         <label for="tipo_auto">Tipo de Auto:</label>
                         <select id="tipo_auto" name="tipo_auto" required>
-                            <option value="estandar">Estándar</option>
-                            <option value="automatico">Automático</option>
-                            <option value="ambos">Ambos</option>
+                            <option value="" disabled selected>Seleccione un tipo</option>
+                            <?php foreach ($tiposAuto as $tipo): ?>
+                                <option value="<?php echo htmlspecialchars($tipo['nombre']); ?>">
+                                    <?php echo htmlspecialchars(ucfirst($tipo['nombre'])); ?>
+                                </option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
@@ -181,9 +189,15 @@ if (!$authService->isAuthenticated()) {
                         <label for="horario">Horario Preferido:</label>
                         <select id="horario" name="horario" required>
                             <option value="" disabled selected>Seleccione un horario</option>
-                            <option value="mañana">Mañana</option>
-                            <option value="tarde">Tarde</option>
-                            <option value="noche">Noche</option>
+                            <?php foreach ($horarios as $horario): ?>
+                                <?php
+                                $horaInicio = substr($horario['hora_inicio'], 0, 5);
+                                $horaFin = substr($horario['hora_fin'], 0, 5);
+                                ?>
+                                <option value="<?php echo htmlspecialchars($horario['nombre']); ?>">
+                                    <?php echo htmlspecialchars(ucfirst($horario['nombre'])) . " ({$horaInicio} - {$horaFin})"; ?>
+                                </option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
@@ -210,6 +224,7 @@ if (!$authService->isAuthenticated()) {
 
     <script src="js/admin.js"></script>
     <script src="js/estudiantes.js"></script>
+    <script src="js/registro_estudiante.js"></script>
 </body>
 
 </html>
